@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrés Martinez — Motion & Video</title>
+  <link rel="icon" href="assets/fav.png" sizes="32x32" type="image/png">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Andrés Martinez — Motion & Video Portfolio" />
+  <meta property="og:description" content="Diseño, animación y video de alto impacto. Mirá mi reel 2025 en 1 minuto." />
+  <meta property="og:image" content="https://andymartinezav.github.io/reel/assets/thumbnail.jpg" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:url" content="https://andymartinezav.github.io/reel/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Andrés Martinez — Motion & Video Portfolio" />
+  <meta name="twitter:description" content="Diseño, animación y video de alto impacto. Mirá mi reel 2025 en 1 minuto." />
+  <meta name="twitter:image" content="https://andymartinezav.github.io/reel/assets/thumbnail.jpg" />
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <img src="assets/logo-horizontal.png" alt="Loading..." class="preloader-logo">
+    <div class="preloader-bar">
+      <div class="preloader-progress" id="preloaderProgress"></div>
+    </div>
+  </div>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-ring" id="customCursorRing"></div>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky-header" id="stickyHeader">
+    <div class="sticky-header-inner">
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <img src="assets/logo-horizontal.png" alt="Andrés Martínez Logo" class="sticky-logo"/>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="#hero" class="menu-link" data-translate="menu_reel">Reel 2025</a>
+      <a href="#brands" class="menu-link" data-translate="menu_brands">Marcas</a>
+      <a href="#about" class="menu-link" data-translate="menu_about">Sobre mí</a>
+      <a href="#social-proof" class="menu-link" data-translate="menu_testimonials">Testimonios</a>
+      <a href="#contact" class="menu-link" data-translate="menu_contact">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-section" id="hero">
+    <img src="assets/logo-horizontal.png" alt="Andrés Martínez - Motion Designer & Video Editor" class="logo" id="mainLogo"/>
+    
+    <div class="reel-header">
+      <div class="reel-duration">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 10l5 5 5-5z"/>
+          <path d="M7 14l5 5 5-5z"/>
+        </svg>
+        <span data-translate="reel_duration">Mirá mi Reel 2025 de trabajos en menos de 1 minuto</span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 10l5 5 5-5z"/>
+          <path d="M7 14l5 5 5-5z"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="video-wrapper">
+      <video id="reel" src="assets/andymartinezreel2025.mp4" controls preload="metadata" poster="assets/thumbnail.jpg" aria-label="Reel 2025 de Andrés Martinez"></video>
+      <div class="play-overlay" id="playBtn" aria-label="Reproducir reel">
+        <div class="play-btn-circle">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="24,16 48,32 24,48"/></svg>
+        </div>
+        <div class="play-text" data-translate="play_text">▶ VER REEL</div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ABOUT -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-photo">
+        <img src="assets/andres-foto.png" alt="Andrés Martinez - Motion Designer profesional">
+      </div>
+      <div class="about-content">
+        <h3>Andrés Martinez</h3>
+        <div class="about-role" data-translate="about_role">Motion Designer & Video Editor</div>
+        <p class="about-text" data-translate="about_text">
+          Transformo ideas en contenido audiovisual que convierte. Especializado en motion graphics 
+          y video editing para marcas que buscan destacarse, con 10+ años creando piezas que generan 
+          engagement real y resultados medibles.
+        </p>
+        <div class="skills">
+          <span class="skill-badge" data-translate="skill_1">2D Animation</span>
+          <span class="skill-badge" data-translate="skill_2">Motion Graphics</span>
+          <span class="skill-badge" data-translate="skill_3">Video Editing</span>
+          <span class="skill-badge" data-translate="skill_4">VFX</span>
+          <span class="skill-badge" data-translate="skill_5">Generative AI</span>
+          <span class="skill-badge" data-translate="skill_6">Lottie JSON</span>
+          <span class="skill-badge" data-translate="skill_7">HTML5/GIF Ads</span>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <strong>10+</strong>
+            <span data-translate="stats_years">Años de<br>Experiencia</span>
+          </div>
+          <div class="stat-item">
+            <strong>$30K+</strong>
+            <span data-translate="stats_revenue">USD Generados<br>Remotamente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- LOGOS MARCAS -->
+  <section id="brands">
+    <h2 data-translate="brands_title">Confiaron en mí</h2>
+    <div class="brands-grid">
+      <div class="brand-item">
+        <img src="assets/logos/brand-01.png" alt="Marca cliente 1 - Proyecto de motion graphics">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-02.png" alt="Marca cliente 2 - Video corporativo">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-03.png" alt="Marca cliente 3 - Animación publicitaria">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-04.png" alt="Marca cliente 4 - Contenido para redes sociales">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-05.png" alt="Marca cliente 5 - Campaña audiovisual">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-06.png" alt="Marca cliente 6 - Edición de video profesional">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-07.png" alt="Marca cliente 7 - Motion design institucional">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-08.png" alt="Marca cliente 8 - Video marketing">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-09.png" alt="Marca cliente 9 - Animación 3D">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-10.png" alt="Marca cliente 10 - Producción audiovisual">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-11.png" alt="Marca cliente 11 - Diseño y animación">
+      </div>
+      <div class="brand-item">
+        <img src="assets/logos/brand-12.png" alt="Marca cliente 12 - Video explicativo">
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- SOCIAL PROOF -->
+  <section id="social-proof">
+    <div class="section-title">
+      <h2 data-translate="testimonials_title">Lo que dicen mis clientes</h2>
+      <p data-translate="testimonials_subtitle">Resultados reales, testimonios genuinos</p>
+    </div>
+
+    <!-- Upwork Badge -->
+    <div class="upwork-badge">
+      <div class="upwork-info">
+        <div class="upwork-logo">
+          <svg viewBox="0 0 102 28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M65.4 7.9c-3.6 0-6.5 2.3-7.5 5.5l-.1.3-.8-5.5h-5.3v14.5h5.5v-8.6c0-2.7 1.5-4.2 3.5-4.2 1.8 0 3 1.2 3 3.5v9.3h5.5v-10c0-4.5-2.6-4.8-3.8-4.8zM47 13.5c0-3.1-2-5.6-5.5-5.6-3.5 0-6.3 2.7-6.3 7.4 0 4.6 2.8 7.4 6.6 7.4 2.5 0 4.3-1.1 5.2-2.3l.2-.2-3.1-2.8-.2.2c-.6.7-1.4 1.1-2.3 1.1-1.5 0-2.5-.9-2.7-2.4h8v-2.8zm-8-1.3c.3-1.3 1.3-2.1 2.5-2.1s2.1.8 2.3 2.1h-4.8zM87.8 7.9c-1.8 0-3.4.8-4.4 2.2l-.2-1.9h-5.1v22.5h5.5v-8.2c1 1 2.4 1.5 3.9 1.5 3.8 0 6.8-3.1 6.8-8s-3-8.1-6.5-8.1zm-1.2 11.4c-1.8 0-3.2-1.5-3.2-3.5s1.4-3.5 3.2-3.5 3.2 1.5 3.2 3.5-1.4 3.5-3.2 3.5zM26.2 0L20.7 17 18 7.9h-4.7L10.6 17 5.1 0H0l8.5 22.7h5.1l2.6-8.7 2.6 8.7h5.1L32.4 0h-6.2zM102 13.3c0-4.8-2.8-7.8-7.1-7.8s-7.4 3-7.4 7.9c0 5.2 3.2 8.2 7.8 8.2 3.1 0 5.5-1.4 6.6-3.9l.2-.4-4.3-1.7-.2.3c-.6 1.1-1.7 1.7-3.1 1.7-1.8 0-3.1-1.1-3.4-2.8h11v-1.5zm-11-1.9c.4-1.5 1.6-2.5 3.1-2.5 1.6 0 2.7 1 2.9 2.5h-6z"/>
+          </svg>
+          Upwork Profile
+        </div>
+        <div class="upwork-stats">
+          <div class="stat">
+            <div class="stat-value">
+              <span class="stars">★★★★★</span>
+              <span>5.0</span>
+            </div>
+            <div class="stat-label" data-translate="upwork_rating">Rating Perfecto</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">100%</div>
+            <div class="stat-label" data-translate="upwork_success">Job Success Score</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">25+</div>
+            <div class="stat-label" data-translate="upwork_projects">Proyectos Completados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+          </svg>
+        </div>
+        <div class="testimonial-header">
+          <div class="client-avatar">M</div>
+          <div class="client-info">
+            <div class="client-name">Michael Chen</div>
+            <div class="client-role">CEO, TechStart Inc.</div>
+          </div>
+        </div>
+        <div class="rating">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="testimonial-text" data-translate="testimonial_1">
+          "Andrés transformó completamente nuestra identidad visual. Su capacidad para entender la visión de nuestra marca y traducirla en animaciones impactantes superó todas nuestras expectativas. Profesional, creativo y siempre puntual."
+        </div>
+        <div class="testimonial-project">
+          <strong data-translate="project_label">Proyecto:</strong> <span data-translate="project_1">Brand Identity & Motion Graphics</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+          </svg>
+        </div>
+        <div class="testimonial-header">
+          <div class="client-avatar">S</div>
+          <div class="client-info">
+            <div class="client-name">Sarah Williams</div>
+            <div class="client-role">Marketing Director, Global Brands</div>
+          </div>
+        </div>
+        <div class="rating">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="testimonial-text" data-translate="testimonial_2">
+          "Trabajar con Andrés fue una experiencia excepcional. No solo entregó un video promocional de altísima calidad, sino que aportó ideas creativas que elevaron nuestro contenido a otro nivel. Su atención al detalle es impresionante."
+        </div>
+        <div class="testimonial-project">
+          <strong data-translate="project_label">Proyecto:</strong> <span data-translate="project_2">Product Launch Video Campaign</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+          </svg>
+        </div>
+        <div class="testimonial-header">
+          <div class="client-avatar">R</div>
+          <div class="client-info">
+            <div class="client-name">Roberto García</div>
+            <div class="client-role">Founder, CreativeHub</div>
+          </div>
+        </div>
+        <div class="rating">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="testimonial-text" data-translate="testimonial_3">
+          "La creatividad y profesionalismo de Andrés son difíciles de encontrar. Nos ayudó a crear contenido que realmente conecta con nuestra audiencia. Su comunicación es excelente y siempre está dispuesto a hacer ajustes hasta lograr la perfección."
+        </div>
+        <div class="testimonial-project">
+          <strong data-translate="project_label">Proyecto:</strong> <span data-translate="project_3">Social Media Content & Animations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact">
+    <div class="section-title">
+      <h2 data-translate="contact_title">¿Tenés un proyecto en mente?</h2>
+      <p data-translate="contact_subtitle">Hablemos sobre cómo puedo ayudarte</p>
+    </div>
+
+    <!-- CTA WhatsApp Principal -->
+    <div class="cta-section">
+      <h2 data-translate="cta_title">La forma más rápida de contactarme</h2>
+      <a href="https://wa.me/5491161108899?text=Hola%20Andrés!%20Me%20interesa%20hablar%20sobre%20un%20proyecto" 
+         class="cta-whatsapp-btn" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.002 2.996c-7.168 0-13 5.832-13 13 0 2.29.604 4.533 1.75 6.5L2.99 29l6.61-1.73a13.01 13.01 0 006.402 1.67h.002c7.168 0 13-5.832 13-13s-5.832-13-13-13zm0 23.999a11.003 11.003 0 01-5.606-1.53l-.4-.237-3.917 1.027 1.045-3.822-.26-.392A10.98 10.98 0 015 15.996c0-6.065 4.936-11 11-11s11 4.935 11 11-4.936 11-11 11zm6.137-8.317c-.336-.17-1.986-.981-2.296-1.094-.307-.112-.532-.17-.757.17-.224.336-.87 1.093-1.066 1.318-.196.224-.392.252-.73.084-.336-.17-1.42-.523-2.705-1.666-1-.893-1.674-1.994-1.872-2.33-.196-.336-.021-.518.148-.688.152-.152.336-.392.505-.588.168-.196.224-.336.336-.56.112-.224.056-.42-.028-.588-.084-.168-.757-1.825-1.037-2.504-.272-.652-.548-.56-.757-.569l-.646-.011c-.224 0-.588.084-.897.392-.308.308-1.176 1.148-1.176 2.805s1.203 3.252 1.372 3.48c.168.224 2.369 3.623 5.745 5.063.804.347 1.432.554 1.92.708.808.258 1.544.222 2.126.135.648-.097 1.986-.811 2.27-1.594.28-.785.28-1.46.196-1.594-.084-.135-.308-.224-.645-.392z"/>
+        </svg>
+        <span data-translate="cta_whatsapp">Hablemos por WhatsApp</span>
+      </a>
+    </div>
+
+    <div class="form-divider">
+      <span data-translate="form_divider">O completá el formulario</span>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="contact-form-section">
+      <h3 data-translate="form_title">Contame sobre tu proyecto</h3>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name" data-translate="form_name">Nombre *</label>
+          <input type="text" id="name" name="name" required placeholder="">
+        </div>
+        
+        <div class="form-group">
+          <label for="email" data-translate="form_email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone" data-translate="form_phone">Teléfono</label>
+          <input type="tel" id="phone" name="phone" placeholder="+54 9 11 1234-5678">
+        </div>
+        
+        <div class="form-group">
+          <label for="projectType" data-translate="form_project_type">Tipo de proyecto *</label>
+          <select id="projectType" name="projectType" required>
+            <option value="" data-translate="form_select_option">Seleccioná una opción</option>
+            <option value="motion-graphics" data-translate="project_motion">Motion Graphics</option>
+            <option value="video-editing" data-translate="project_editing">Edición de Video</option>
+            <option value="animation-3d" data-translate="project_3d">Animación 3D</option>
+            <option value="social-media" data-translate="project_social">Contenido para Redes Sociales</option>
+            <option value="explainer-video" data-translate="project_explainer">Video Explicativo</option>
+            <option value="corporate-video" data-translate="project_corporate">Video Corporativo</option>
+            <option value="other" data-translate="project_other">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" data-translate="form_message">Contanos sobre tu proyecto *</label>
+          <textarea id="message" name="message" required placeholder=""></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit" data-translate="form_submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="copyright">
+        © 2025 Andrés Martinez Reumann<br/>
+        — Design, Motion & Video —
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/5491161108899" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.002 2.996c-7.168 0-13 5.832-13 13 0 2.29.604 4.533 1.75 6.5L2.99 29l6.61-1.73a13.01 13.01 0 006.402 1.67h.002c7.168 0 13-5.832 13-13s-5.832-13-13-13zm0 23.999a11.003 11.003 0 01-5.606-1.53l-.4-.237-3.917 1.027 1.045-3.822-.26-.392A10.98 10.98 0 015 15.996c0-6.065 4.936-11 11-11s11 4.935 11 11-4.936 11-11 11zm6.137-8.317c-.336-.17-1.986-.981-2.296-1.094-.307-.112-.532-.17-.757.17-.224.336-.87 1.093-1.066 1.318-.196.224-.392.252-.73.084-.336-.17-1.42-.523-2.705-1.666-1-.893-1.674-1.994-1.872-2.33-.196-.336-.021-.518.148-.688.152-.152.336-.392.505-.588.168-.196.224-.336.336-.56.112-.224.056-.42-.028-.588-.084-.168-.757-1.825-1.037-2.504-.272-.652-.548-.56-.757-.569l-.646-.011c-.224 0-.588.084-.897.392-.308.308-1.176 1.148-1.176 2.805s1.203 3.252 1.372 3.48c.168.224 2.369 3.623 5.745 5.063.804.347 1.432.554 1.92.708.808.258 1.544.222 2.126.135.648-.097 1.986-.811 2.27-1.594.28-.785.28-1.46.196-1.594-.084-.135-.308-.224-.645-.392z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
