@@ -8,7 +8,7 @@ const translations = {
     menu_about: 'Sobre mí',
     menu_testimonials: 'Testimonios',
     menu_contact: 'Contacto',
-    brands_title: 'Marcas con las que trabaje',
+    brands_title: 'Marcas con las que trabajé',
     about_role: 'Motion Designer & Video Editor',
     about_text: 'Transformo ideas en contenido audiovisual que convierte. Especializado en motion graphics y video editing para marcas que buscan destacarse, con 10+ años creando piezas que generan engagement real y resultados medibles.',
     skill_1: '2D Animation',
