@@ -80,7 +80,7 @@ const translations = {
   }
 };
 
-let currentLang = 'es';
+let currentLang = 'en';
 
 function translatePage(lang) {
   currentLang = lang;
@@ -88,6 +88,13 @@ function translatePage(lang) {
   // Actualizar botones de idioma
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  
+  // Cambiar el logo según el idioma
+  const logoSuffix = lang === 'en' ? '-en' : '-es';
+  document.querySelectorAll('.logo, .sticky-logo, .preloader-logo').forEach(logo => {
+    const basePath = 'assets/logo-horizontal';
+    logo.src = `${basePath}${logoSuffix}.png`;
   });
   
   // Traducir elementos con data-translate
@@ -103,14 +110,19 @@ function translatePage(lang) {
     }
   });
   
-  // Traducir placeholders
-  const namePlaceholder = lang === 'en' ? 'Your full name' : 'Tu nombre completo';
-  const messagePlaceholder = lang === 'en' 
-    ? 'Describe your project, objectives, deadlines, estimated budget, etc.' 
-    : 'Describí tu proyecto, objetivos, plazos, presupuesto estimado, etc.';
+  // Traducir placeholders (si existen)
+  const nameInput = document.getElementById('name');
+  const messageInput = document.getElementById('message');
   
-  document.getElementById('name').placeholder = namePlaceholder;
-  document.getElementById('message').placeholder = messagePlaceholder;
+  if (nameInput) {
+    nameInput.placeholder = lang === 'en' ? 'Your full name' : 'Tu nombre completo';
+  }
+  
+  if (messageInput) {
+    messageInput.placeholder = lang === 'en' 
+      ? 'Describe your project, objectives, deadlines, estimated budget, etc.' 
+      : 'Describí tu proyecto, objetivos, plazos, presupuesto estimado, etc.';
+  }
 }
 
 // Event listeners para botones de idioma
@@ -118,6 +130,11 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     translatePage(btn.dataset.lang);
   });
+});
+
+// Inicializar en inglés al cargar
+document.addEventListener('DOMContentLoaded', () => {
+  translatePage('en');
 });
 
 // PRELOADER
